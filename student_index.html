@@ -9,40 +9,43 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="fileperms_style.css" />
+    <link rel="stylesheet" href="home_style.css" />
 
 </head>
 
 <body>
-    In each scenario, you will see a simplified file system management interface. <br />
-    Pretend that you are an administrator for this file system, and you are tasked with maintaining correct file
-    permissions. <br />
-    Complete the task given in each scenario. <br />
-    <h2>
-        Easy
-    </h2>
-    <a href="index.html?tag=remove_direct_permission">1. Remove some permissions from employee (V1)</a>
-    (remove_direct_permission) <br />
-    <a href="index.html?tag=add_new_user">2. Add permissions for a new employee</a> (add_new_user) <br />
-    <a href="index.html?tag=add_full_permissions">3. Add permissions for a manager</a> (add_full_permissions) <br />
-    <h2>
-        Medium
-    </h2>
-    <a href="index.html?tag=remove_inherited_permission">4. Remove some permissions from employee (V2)</a>
-    (remove_inherited_permission) <br />
-    <a href="index.html?tag=intern_permissions">5. Add permissions for an intern</a> (intern_permissions) <br />
-    <a href="index.html?tag=remove_user_with_inheritance">6. Remove ALL permissions from employee</a>
-    (remove_user_with_inheritance) <br />
-    <h2>
-        Hard
-    </h2>
-    <a href="index.html?tag=restrict_group_member">7. Remove some permissions from employee (V3)</a>
-    (restrict_group_member) <br />
-    <a href="index.html?tag=let_ta_modify">8. Fix permissions for a teaching assistant</a> (let_ta_modify) <br />
-    <a href="index.html?tag=lost_inheritance">9. Fix permissions for all users</a> (lost_inheritance) <br />
+  <div class="wrapper">
 
-    <br /><br />
-    <a href='parsed_gender_mag_logs.zip' download> Download logs</a>
+    <p class="intro">
+      In each scenario, you will see a simplified file system management interface.<br />
+      Pretend that you are an administrator for this file system, and you are tasked with maintaining correct file permissions.<br />
+      Complete the task given in each scenario.
+    </p>
+
+    <h2>Easy</h2>
+    <ul class="scenario-list">
+      <li><span class="scenario-num">01</span><a href="index.html?tag=remove_direct_permission">Remove some permissions from employee (V1)</a><span class="scenario-tag">remove_direct_permission</span></li>
+      <li><span class="scenario-num">02</span><a href="index.html?tag=add_new_user">Add permissions for a new employee</a><span class="scenario-tag">add_new_user</span></li>
+      <li><span class="scenario-num">03</span><a href="index.html?tag=add_full_permissions">Add permissions for a manager</a><span class="scenario-tag">add_full_permissions</span></li>
+    </ul>
+
+    <h2>Medium</h2>
+    <ul class="scenario-list">
+      <li><span class="scenario-num">04</span><a href="index.html?tag=remove_inherited_permission">Remove some permissions from employee (V2)</a><span class="scenario-tag">remove_inherited_permission</span></li>
+      <li><span class="scenario-num">05</span><a href="index.html?tag=intern_permissions">Add permissions for an intern</a><span class="scenario-tag">intern_permissions</span></li>
+      <li><span class="scenario-num">06</span><a href="index.html?tag=remove_user_with_inheritance">Remove ALL permissions from employee</a><span class="scenario-tag">remove_user_with_inheritance</span></li>
+    </ul>
+
+    <h2>Hard</h2>
+    <ul class="scenario-list">
+      <li><span class="scenario-num">07</span><a href="index.html?tag=restrict_group_member">Remove some permissions from employee (V3)</a><span class="scenario-tag">restrict_group_member</span></li>
+      <li><span class="scenario-num">08</span><a href="index.html?tag=let_ta_modify">Fix permissions for a teaching assistant</a><span class="scenario-tag">let_ta_modify</span></li>
+      <li><span class="scenario-num">09</span><a href="index.html?tag=lost_inheritance">Fix permissions for all users</a><span class="scenario-tag">lost_inheritance</span></li>
+    </ul>
+
+    <a class="download-link" href="parsed_gender_mag_logs.zip" download>Download Logs</a>
+
+  </div>
 </body>
 
 </html>
