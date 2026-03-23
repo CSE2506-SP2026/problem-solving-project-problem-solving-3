@@ -1,21 +1,329 @@
 .file {
-    padding: 8;
-    border-bottom: 1px solid #dddddd;
+    padding: 8px;
+    border-bottom: 1px solid #e8e6e0;
 }
 
 .section {
-    margin-bottom: 5px;
+    margin-bottom: 12px;
 }
 
-.ui-selected { 
-    background: #007fff; 
-    color: white; 
+.no-close .ui-dialog-titlebar-close {
+    display: none;
 }
 
-.footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
+
+.ui-dialog {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 13px !important;
+    background: #ffffff !important;
+    border: 1px solid #d3d1c7 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14) !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    width: 540px !important;
+}
+
+.ui-dialog *,
+.ui-dialog *::before,
+.ui-dialog *::after {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    box-sizing: border-box !important;
+}
+
+
+.ui-dialog-titlebar {
+    background: #ffffff !important;
+    border: none !important;
+    border-bottom: 1px solid #e8e6e0 !important;
+    border-radius: 0 !important;
+    padding: 16px 24px !important;
+    margin: 0 !important;
+}
+
+.ui-dialog-title {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #1a1a18 !important;
+    float: none !important;
+}
+
+.ui-dialog-titlebar-close {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    position: absolute !important;
+    top: 14px !important;
+    right: 16px !important;
+    width: 24px !important;
+    height: 24px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+}
+
+.ui-dialog-titlebar-close:hover {
+    background: #f0ede8 !important;
+}
+
+
+.ui-dialog-content {
+    padding: 20px 24px 16px !important;
+    background: #ffffff !important;
+    font-size: 13px !important;
+    color: #1a1a18 !important;
+    overflow: visible !important;
+    width: 100% !important;
+}
+
+
+#permdialog_objname {
+    font-size: 12px !important;
+    color: #5F5E5A !important;
+    margin-bottom: 16px !important;
+    padding: 0 !important;
+    background: none !important;
+    border: none !important;
+}
+
+
+#permissions_user_title {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    color: #5F5E5A !important;
+    margin-bottom: 6px !important;
+}
+
+
+
+.selectlist {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;       
+    min-height: 36px !important;
+    max-height: 160px !important;
+    overflow-y: auto !important;
+    border: 1px solid #e0ddd6 !important;
+    border-radius: 6px !important;
+    background: #ffffff !important;
+    padding: 0 !important;
+    margin-bottom: 10px !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+.selectlist .ui-widget-content {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0 !important;             
+    padding: 9px 14px !important;
+    font-size: 13px !important;
+    color: #1a1a18 !important;
+    background: #ffffff !important;
+    cursor: pointer !important;
+    border: none !important;
+    border-bottom: 1px solid #f0ede8 !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    min-height: 36px !important;
+    user-select: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.selectlist .ui-widget-content:last-child {
+    border-bottom: none !important;
+}
+
+.selectlist .ui-widget-content:hover {
+    background: #f8f7f4 !important;
+    color: #1a1a18 !important;
+}
+
+
+.selectlist .oi {
+    display: none !important;
+}
+
+
+
+.selectlist .ui-selected {
+    background: #EBF3FB !important;
+    color: #185FA5 !important;
+    font-weight: 500 !important;
+    border-bottom-color: #d5e8f7 !important;
+}
+
+.selectlist .ui-selected:hover {
+    background: #EBF3FB !important;
+    color: #185FA5 !important;
+}
+
+
+#perm_add_user,
+#perm_remove_user {
+    font-size: 12px !important;
+    padding: 5px 14px !important;
+    border-radius: 6px !important;
+    border: 1px solid #d3d1c7 !important;
+    background: #ffffff !important;
+    color: #1a1a18 !important;
+    cursor: pointer !important;
+    font-weight: 400 !important;
+    box-shadow: none !important;
+    margin-right: 6px !important;
+    height: auto !important;
+    line-height: 1.4 !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+#perm_add_user:hover,
+#perm_remove_user:hover {
+    background: #f8f7f4 !important;
+}
+
+#perm_add_user_select_div {
+    margin-bottom: 16px !important;
+}
+
+
+#permdialog_grouped_permissions {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    border: 1px solid #e0ddd6 !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+    font-size: 13px !important;
+    margin-bottom: 14px !important;
+    background: #ffffff !important;
+}
+
+#permdialog_grouped_permissions th {
+    background: #f8f7f4 !important;
+    padding: 8px 14px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    color: #5F5E5A !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+    text-align: left !important;
+    border-bottom: 1px solid #e8e6e0 !important;
+}
+
+#permdialog_grouped_permissions th:not(:first-child) {
+    text-align: center !important;
+    width: 64px !important;
+}
+
+#permdialog_grouped_permissions td {
+    padding: 9px 14px !important;
+    color: #1a1a18 !important;
+    background: #ffffff !important;
+    vertical-align: middle !important;
+    border: none !important;
+    border-top: 1px solid #f0ede8 !important;
+}
+
+#permdialog_grouped_permissions td:not(:first-child) {
+    text-align: center !important;
+    width: 64px !important;
+}
+
+#permdialog_grouped_permissions tr:first-child td {
+    border-top: none !important;
+}
+
+#permdialog_grouped_permissions tr:hover td {
+    background: #f8f7f4 !important;
+}
+
+
+input[type="checkbox"] {
+    width: 14px !important;
+    height: 14px !important;
+    accent-color: #185FA5 !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+    vertical-align: middle !important;
+}
+
+
+#permdialog_advanced_explantion_text {
+    font-size: 12px !important;
+    color: #888780 !important;
+    margin: 0 0 8px !important;
+    line-height: 1.5 !important;
+}
+
+
+.ui-dialog-buttonpane {
+    background: #ffffff !important;
+    border-top: 1px solid #e8e6e0 !important;
+    padding: 14px 24px !important;
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.ui-dialog-buttonpane .ui-button,
+.ui-dialog-buttonset .ui-button {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    padding: 8px 20px !important;
+    border-radius: 6px !important;
+    border: 1px solid #d3d1c7 !important;
+    background: #ffffff !important;
+    color: #1a1a18 !important;
+    cursor: pointer !important;
+    box-shadow: none !important;
+    height: auto !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+    display: inline-block !important;
+}
+
+.ui-dialog-buttonpane .ui-button:hover,
+.ui-dialog-buttonset .ui-button:hover {
+    background: #f8f7f4 !important;
+}
+
+.ui-dialog-buttonpane .ui-button:last-child,
+.ui-dialog-buttonset .ui-button:last-child {
+    background: #185FA5 !important;
+    color: #ffffff !important;
+    border-color: #185FA5 !important;
+}
+
+.ui-dialog-buttonpane .ui-button:last-child:hover,
+.ui-dialog-buttonset .ui-button:last-child:hover {
+    background: #0C447C !important;
+    border-color: #0C447C !important;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f8f7f4;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d3d1c7;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b4b2a9;
 }
 
 
@@ -23,16 +331,18 @@
     position: absolute;
     width: 99%;
     bottom: 0px;
-    top:unset;
+    top: unset;
     left: 0;
     background-color: #eee;
     z-index: 100;
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
     border-left: 1px orange solid;
     border-right: 1px orange solid;
     border-top: 1px orange solid;
 }
 
-.no-close .ui-dialog-titlebar-close {
-    display: none;
+.footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
