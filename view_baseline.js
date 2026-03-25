@@ -11,7 +11,7 @@ perm_dialog = define_new_dialog('permdialog', title='Permissions', options = {
     width: 400,
     buttons: {
         OK:{
-            text: "OK",
+            text: "Save",
             id: "perm-dialog-ok-button",
             click: function() {
                 $( this ).dialog( "close" );
@@ -48,7 +48,7 @@ file_permission_users.css({
 })
 
 // Make button to add a new user to the list:
-perm_add_user_select = define_new_user_select_field('perm_add_user', 'Add...', on_user_change = function(selected_user){
+perm_add_user_select = define_new_user_select_field('perm_add_user', 'Add to Group', on_user_change = function(selected_user){
     // console.log("add...")
     let filepath = perm_dialog.attr('filepath')
     if(selected_user && (selected_user.length > 0) && (selected_user in all_users)) { // sanity check that a user is actually selected (and exists)
@@ -120,7 +120,7 @@ let are_you_sure_dialog = define_new_dialog('are_you_sure_dialog', "Are you sure
 are_you_sure_dialog.text('Do you want to remove permissions for this user?')
 
 // Make actual "remove" button:
-perm_remove_user_button  = $('<button id="perm_remove_user" class="ui-button ui-widget ui-corner-all">Remove</button>')
+perm_remove_user_button  = $('<button id="perm_remove_user" class="ui-button ui-widget ui-corner-all">Remove from Group</button>')
 perm_remove_user_button.click(function(){
     // Get the current user and filename we are working with:
     let selected_username = file_permission_users.attr('selected_item')
@@ -325,7 +325,7 @@ let adv_contents = $(`#advdialog`).dialog({
     appendTo: "#html-loc",
     buttons: {
         OK: {
-            text: "OK",
+            text: "Save",
             id: "advanced-dialog-ok-button",
             click: function() {
                 $( this ).dialog( "close" );
