@@ -505,8 +505,8 @@ let user_select_contents = $("#user_select_dialog").dialog({
 let perm_entry_dialog = $('#permentry').dialog({
     modal: true,
     autoOpen: false,
-    height: 500,
-    width: 400,
+    height: 700,
+    width: 500,
     appendTo: "#html-loc",
     position: { my: "top", at: "top", of: $('#html-loc') },
     buttons: {

@@ -1,6 +1,7 @@
+/* ── Misc ─────────────────────────────────────────────────── */
 .file {
-    padding: 8px;
-    border-bottom: 1px solid #e8e6e0;
+    padding: 8px 12px;
+    border-bottom: 1px solid #e6e6e2;
 }
 
 .section {
@@ -11,389 +12,10 @@
     display: none;
 }
 
-
-.ui-dialog {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
-    font-size: 13px !important;
-    background: #ffffff !important;
-    border: 1px solid #d3d1c7 !important;
-    border-radius: 10px !important;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14) !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-    width: 620px !important;
-    min-height: 620px !important;
-}
-
-.ui-dialog *,
-.ui-dialog *::before,
-.ui-dialog *::after {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
-    box-sizing: border-box !important;
-}
-
-
-.ui-dialog-titlebar {
-    background: #ffffff !important;
-    border: none !important;
-    border-bottom: 1px solid #e8e6e0 !important;
-    border-radius: 0 !important;
-    padding: 16px 24px !important;
-    margin: 0 !important;
-}
-
-.ui-dialog-title {
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    color: #1a1a18 !important;
-    float: none !important;
-}
-
-.ui-dialog-titlebar-close {
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    outline: none !important;
-    position: absolute !important;
-    top: 14px !important;
-    right: 16px !important;
-    width: 24px !important;
-    height: 24px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border-radius: 4px !important;
-    cursor: pointer !important;
-}
-
-.ui-dialog-titlebar-close:hover {
-    background: #f0ede8 !important;
-}
-
-
-.ui-dialog-content {
-    padding: 20px 24px 16px !important;
-    background: #ffffff !important;
-    font-size: 13px !important;
-    color: #1a1a18 !important;
-    overflow: visible !important;
-    width: 100% !important;
-}
-
-
-#permdialog_objname {
-    font-size: 12px !important;
-    color: #5F5E5A !important;
-    margin-bottom: 16px !important;
-    padding: 0 !important;
-    background: none !important;
-    border: none !important;
-}
-
-
-#permissions_user_title {
-    font-size: 12px !important;
-    font-weight: 500 !important;
-    color: #5F5E5A !important;
-    margin-bottom: 6px !important;
-}
-
-
-
-.selectlist {
-    display: block !important;
-    width: 100% !important;
-    height: auto !important;
-    min-height: 80px !important;
-    max-height: 200px !important;
-    overflow-y: auto !important;
-    border: 1px solid #e0ddd6 !important;
-    border-radius: 6px !important;
-    background: #ffffff !important;
-    padding: 4px 0 !important;
-    margin-bottom: 10px !important;
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-
-.selectlist .ui-widget-content {
-    display: flex !important;
-    align-items: center !important;
-    gap: 0 !important;
-    padding: 10px 16px !important;
-    font-size: 13px !important;
-    color: #1a1a18 !important;
-    background: #ffffff !important;
-    cursor: pointer !important;
-    border: none !important;
-    border-bottom: 1px solid #f0ede8 !important;
-    border-radius: 0 !important;
-    margin: 0 !important;
-    width: 100% !important;
-    min-height: 40px !important;
-    user-select: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-.selectlist .ui-widget-content:last-child {
-    border-bottom: none !important;
-}
-
-.selectlist .ui-widget-content:hover {
-    background: #f8f7f4 !important;
-    color: #1a1a18 !important;
-}
-
-
-.selectlist .oi {
-    display: none !important;
-}
-
-
-/* Selection highlight — target both .selectlist and the bare divs created by define_single_select_list */
-.selectlist .ui-selected,
-#permdialog_file_user_list .ui-selected,
-#user_select_list .ui-selected,
-#user_select_list2 .ui-selected,
-[id$="_all_users"] .ui-selected {
-    background: #EBF3FB !important;
-    color: #185FA5 !important;
-    font-weight: 500 !important;
-    border-bottom-color: #d5e8f7 !important;
-}
-
-.selectlist .ui-selected:hover,
-#permdialog_file_user_list .ui-selected:hover,
-#user_select_list .ui-selected:hover {
-    background: #EBF3FB !important;
-    color: #185FA5 !important;
-}
-
-/* Also style the rows inside the single-select lists to match .selectlist rows */
-#permdialog_file_user_list .ui-widget-content,
-#user_select_list .ui-widget-content {
-    display: flex !important;
-    align-items: center !important;
-    padding: 10px 16px !important;
-    font-size: 13px !important;
-    color: #1a1a18 !important;
-    background: #ffffff !important;
-    cursor: pointer !important;
-    border: none !important;
-    border-bottom: 1px solid #f0ede8 !important;
-    margin: 0 !important;
-    min-height: 40px !important;
-    user-select: none !important;
-}
-
-#permdialog_file_user_list .ui-widget-content:hover,
-#user_select_list .ui-widget-content:hover {
-    background: #f8f7f4 !important;
-}
-
-#permdialog_file_user_list,
-#user_select_list {
-    border: 1px solid #e0ddd6 !important;
-    border-radius: 6px !important;
-    overflow: hidden !important;
-    margin-bottom: 10px !important;
-    min-height: 150px !important;
-    max-height: 320px !important;
-    overflow-y: auto !important;
-    background: #ffffff !important;
-    padding: 4px 0 !important;
-}
-
-
-#perm_add_user,
-#perm_remove_user {
-    font-size: 12px !important;
-    padding: 5px 14px !important;
-    border-radius: 6px !important;
-    border: 1px solid #d3d1c7 !important;
-    background: #ffffff !important;
-    color: #1a1a18 !important;
-    cursor: pointer !important;
-    font-weight: 400 !important;
-    box-shadow: none !important;
-    margin-right: 6px !important;
-    height: auto !important;
-    line-height: 1.4 !important;
-    display: inline-block !important;
-    vertical-align: middle !important;
-}
-
-#perm_add_user:hover,
-#perm_remove_user:hover {
-    background: #f8f7f4 !important;
-}
-
-#perm_add_user_select_div {
-    margin-bottom: 16px !important;
-}
-
-
-#permdialog_grouped_permissions {
-    width: 100% !important;
-    border-collapse: collapse !important;
-    border: 1px solid #e0ddd6 !important;
-    border-radius: 6px !important;
-    overflow: hidden !important;
-    font-size: 13px !important;
-    margin-bottom: 14px !important;
-    background: #ffffff !important;
-}
-
-#permdialog_grouped_permissions th {
-    background: #f8f7f4 !important;
-    padding: 8px 14px !important;
-    font-size: 11px !important;
-    font-weight: 600 !important;
-    color: #5F5E5A !important;
-    letter-spacing: 0.04em !important;
-    text-transform: uppercase !important;
-    text-align: left !important;
-    border-bottom: 1px solid #e8e6e0 !important;
-}
-
-#permdialog_grouped_permissions th:not(:first-child) {
-    text-align: center !important;
-    width: 64px !important;
-}
-
-#permdialog_grouped_permissions td {
-    padding: 9px 14px !important;
-    color: #1a1a18 !important;
-    background: #ffffff !important;
-    vertical-align: middle !important;
-    border: none !important;
-    border-top: 1px solid #f0ede8 !important;
-}
-
-#permdialog_grouped_permissions td:not(:first-child) {
-    text-align: center !important;
-    width: 64px !important;
-}
-
-#permdialog_grouped_permissions tr:first-child td {
-    border-top: none !important;
-}
-
-#permdialog_grouped_permissions tr:hover td {
-    background: #f8f7f4 !important;
-}
-
-
-input[type="checkbox"] {
-    width: 14px !important;
-    height: 14px !important;
-    accent-color: #185FA5 !important;
-    cursor: pointer !important;
-    margin: 0 !important;
-    vertical-align: middle !important;
-}
-
-
-#permdialog_advanced_explantion_text {
-    font-size: 12px !important;
-    color: #888780 !important;
-    margin: 45px 0 8px !important;
-    line-height: 1.5 !important;
-}
-
-
-.ui-dialog-buttonpane {
-    background: #ffffff !important;
-    border-top: 1px solid #e8e6e0 !important;
-    padding: 14px 24px !important;
-    margin: 0 !important;
-    display: flex !important;
-    justify-content: flex-end !important;
-    align-items: center !important;
-    gap: 8px !important;
-}
-
-.ui-dialog-buttonpane .ui-button,
-.ui-dialog-buttonset .ui-button {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
-    font-size: 13px !important;
-    font-weight: 500 !important;
-    padding: 8px 20px !important;
-    border-radius: 6px !important;
-    border: 1px solid #d3d1c7 !important;
-    background: #ffffff !important;
-    color: #1a1a18 !important;
-    cursor: pointer !important;
-    box-shadow: none !important;
-    height: auto !important;
-    line-height: 1.4 !important;
-    margin: 0 !important;
-    display: inline-block !important;
-}
-
-.ui-dialog-buttonpane .ui-button:hover,
-.ui-dialog-buttonset .ui-button:hover {
-    background: #f8f7f4 !important;
-}
-
-.ui-dialog-buttonpane .ui-button:last-child,
-.ui-dialog-buttonset .ui-button:last-child {
-    background: #185FA5 !important;
-    color: #ffffff !important;
-    border-color: #185FA5 !important;
-}
-
-.ui-dialog-buttonpane .ui-button:last-child:hover,
-.ui-dialog-buttonset .ui-button:last-child:hover {
-    background: #0C447C !important;
-    border-color: #0C447C !important;
-}
-
-
-/* Effective permissions user dropdown */
-#adv_effective_user_dropdown {
-    width: 100% !important;
-    padding: 8px 10px !important;
-    font-size: 13px !important;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
-    border: 1px solid #e0ddd6 !important;
-    border-radius: 6px !important;
-    background: #ffffff !important;
-    color: #1a1a18 !important;
-    cursor: pointer !important;
-    outline: none !important;
-    appearance: auto !important;
-    margin-bottom: 12px !important;
-}
-
-#adv_effective_user_dropdown:focus {
-    border-color: #185FA5 !important;
-    box-shadow: 0 0 0 2px rgba(24, 95, 165, 0.15) !important;
-}
-
-::-webkit-scrollbar {
-    width: 5px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f8f7f4;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #d3d1c7;
-    border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #b4b2a9;
-}
-
-
 #mturk-top-banner-drop-down-content {
     position: absolute;
     width: 99%;
-    bottom: 0px;
+    bottom: 0;
     top: unset;
     left: 0;
     background-color: #eee;
@@ -410,42 +32,528 @@ input[type="checkbox"] {
     right: 0;
 }
 
-.ui-widget-content.ui-selected {
-    background: #EBF3FB !important;
-    color: #185FA5 !important;
+/* ── Dialog shell ─────────────────────────────────────────── */
+.ui-dialog {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    background: #f6f6f4 !important;
+    border: 1px solid #d8d8d2 !important;
+    border-radius: 16px !important;
+    box-shadow: 0 12px 36px rgba(0,0,0,0.15) !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+}
+
+.ui-dialog *,
+.ui-dialog *::before,
+.ui-dialog *::after {
+    box-sizing: border-box !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
+.ui-dialog[aria-describedby="advdialog"] {
+    width: 900px !important;
+    max-width: 95vw !important;
+}
+
+.ui-dialog[aria-describedby="permdialog"] {
+    width: 640px !important;
+    height: 700px;
+}
+
+/* ── Title bar ────────────────────────────────────────────── */
+.ui-dialog-titlebar {
+    background: #f6f6f4 !important;
+    border: none !important;
+    border-bottom: 1px solid #e2e2dc !important;
+    padding: 18px 24px !important;
+    margin: 0 !important;
+    position: relative !important;
+}
+
+.ui-dialog-title {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #1f1f1c !important;
+    float: none !important;
+    line-height: 1.3 !important;
+}
+
+.ui-dialog-titlebar-close {
+    position: absolute !important;
+    top: 14px !important;
+    right: 18px !important;
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 8px !important;
+    border: 1px solid #c8c8c1 !important;
+    background: #f6f6f4 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.ui-dialog-titlebar-close:hover {
+    background: #ecece7 !important;
+}
+
+.ui-dialog-titlebar-close .ui-icon {
+    background: none !important;
+    text-indent: 0 !important;
+    overflow: visible !important;
+    width: auto !important;
+    height: auto !important;
+    position: static !important;
+    margin: 0 !important;
+}
+
+.ui-dialog-titlebar-close .ui-icon::before {
+    content: "×";
+    font-size: 20px;
+    line-height: 1;
+    color: #1f1f1c;
+    display: block;
+    text-align: center;
+}
+
+/* ── Content area ─────────────────────────────────────────── */
+/* Ensure the content area leaves room for the footer */
+.ui-dialog-content {
+    padding-bottom: 24px !important;
+    overflow-y: auto !important;
+    
+    /* Change these values to make it longer */
+    min-height: 600px !important; /* Forces the window to start taller */
+    max-height: 80vh !important;   /* Allows it to grow up to 80% of the screen height */
+    margin-bottom: 60px !important; 
+}
+
+/* Object path lines */
+#adv_perm_object_name,
+#adv_owner_object_name,
+#adv_effective_object_name,
+#permdialog_objname {
+    font-size: 13px !important;
+    color: #5a5a55 !important;
+    margin-bottom: 16px !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+/* ── Tabs ─────────────────────────────────────────────────── */
+#advtabs {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+#advtabs .ui-tabs-nav {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid #e2e2dc !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 0 20px 0 !important;
+    display: flex !important;
+    gap: 6px !important;
+}
+
+#advtabs .ui-tabs-nav li {
+    background: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#advtabs .ui-tabs-nav li a {
+    display: inline-block !important;
+    padding: 8px 16px !important;
+    border-radius: 8px 8px 0 0 !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #4a4a45 !important;
+    text-decoration: none !important;
+    background: transparent !important;
+}
+
+#advtabs .ui-tabs-active a {
+    background: #ecece7 !important;
+    color: #1f1f1c !important;
+}
+
+/* 1. Reset the base link style to ensure no default underlines */
+#advtabs .ui-tabs-nav li a {
+    position: relative !important;
+    color: #4a4a45 !important; /* Inactive text color */
+    text-decoration: none !important;
+    padding: 8px 16px !important;
+    transition: color 0.2s ease !important;
+}
+
+/* 2. Style the Active Tab (Blue text + Underline) */
+#advtabs .ui-tabs-nav li.ui-tabs-active a {
+    color: #0067c0 !important; /* Professional Windows Blue */
+    font-weight: 700 !important;
+    background: transparent !important; /* Keeps it clean */
+}
+
+/* 3. The Blue Underline using a pseudo-element */
+#advtabs .ui-tabs-nav li.ui-tabs-active a::after {
+    content: "" !important;
+    position: absolute !important;
+    bottom: -1px !important; /* Pins it to the bottom border of the nav */
+    left: 0 !important;
+    right: 0 !important;
+    height: 3px !important; /* Thickness of the underline */
+    background-color: #0067c0 !important; /* Matches the text */
+    border-radius: 2px 2px 0 0 !important;
+}
+
+/* 4. Optional: Hover effect for inactive tabs */
+#advtabs .ui-tabs-nav li:not(.ui-tabs-active) a:hover {
+    color: #000000 !important;
+    background: #f0f0f0 !important;
+    border-radius: 4px !important;
+}
+
+/* ── User lists ───────────────────────────────────────────── */
+.selectlist,
+#permdialog_file_user_list,
+[id$="_all_users"] {
+    width: 100% !important;
+    border: 1px solid #d7d7d0 !important;
+    border-radius: 10px !important;
+    background: #fbfbf9 !important;
+    overflow: hidden !important;
+    overflow-y: auto !important;
+    padding: 0 !important;
+    min-height: 120px !important;
+    max-height: 260px !important;
+    margin-bottom: 10px !important;
+}
+
+.selectlist .ui-widget-content,
+#permdialog_file_user_list .ui-widget-content,
+[id$="_all_users"] .ui-widget-content {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    min-height: 44px !important;
+    padding: 10px 14px !important;
+    border: none !important;
+    border-bottom: 1px solid #e6e6e0 !important;
+    background: #fbfbf9 !important;
+    color: #1f1f1c !important;
+    font-size: 14px !important;
     font-weight: 500 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
 }
 
-.ui-widget-content.ui-selected:hover {
-    background: #EBF3FB !important;
-    color: #185FA5 !important;
+.selectlist .ui-widget-content:last-child,
+#permdialog_file_user_list .ui-widget-content:last-child,
+[id$="_all_users"] .ui-widget-content:last-child {
+    border-bottom: none !important;
 }
 
-#permdialog_file_user_list .ui-widget-content.ui-selected,
-#user_select_list .ui-widget-content.ui-selected,
-#user_select_list2 .ui-widget-content.ui-selected,
-[id$="_all_users"] .ui-widget-content.ui-selected {
-    background: #EBF3FB !important;
-    color: #185FA5 !important;
-    font-weight: 500 !important;
-    border-bottom-color: #d5e8f7 !important;
+.selectlist .ui-widget-content:hover,
+#permdialog_file_user_list .ui-widget-content:hover,
+[id$="_all_users"] .ui-widget-content:hover {
+    background: #f1f1ec !important;
 }
 
-#permdialog_file_user_list .ui-widget-content.ui-selected:hover,
-#user_select_list .ui-widget-content.ui-selected:hover,
-#user_select_list2 .ui-widget-content.ui-selected:hover,
-[id$="_all_users"] .ui-widget-content.ui-selected:hover {
-    background: #EBF3FB !important;
-    color: #185FA5 !important;
-}
-
+/* Avatar icon */
+.selectlist .oi,
 #permdialog_file_user_list .oi,
-#user_select_list .oi,
-#user_select_list2 .oi,
 [id$="_all_users"] .oi {
-    display: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 28px !important;
+    height: 28px !important;
+    border-radius: 50% !important;
+    background: #d8e5f3 !important;
+    color: #335f91 !important;
+    font-size: 13px !important;
+    flex-shrink: 0 !important;
 }
 
-.ui-dialog[aria-describedby="permdialog"] .ui-dialog-buttonpane {
-    margin-top: 500px !important;
+/* Selected row */
+.ui-widget-content.ui-selected,
+#permdialog_file_user_list .ui-widget-content.ui-selected,
+[id$="_all_users"] .ui-widget-content.ui-selected {
+    background: #e8f1fb !important;
+    color: #23588e !important;
+    font-weight: 600 !important;
 }
+
+/* ── Permissions tables ───────────────────────────────────── */
+#permdialog_grouped_permissions,
+#perm_entry_table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border: 1px solid #d7d7d0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #fbfbf9 !important;
+    margin-bottom: 12px !important;
+}
+
+#permdialog_grouped_permissions th,
+#perm_entry_table th {
+    background: #ececе7 !important;
+    color: #3a3a36 !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    padding: 9px 14px !important;
+    border: none !important;
+    border-bottom: 1px solid #d7d7d0 !important;
+    text-align: left !important;
+}
+
+#permdialog_grouped_permissions th:not(:first-child),
+#perm_entry_table th:nth-child(2),
+#perm_entry_table th:nth-child(3) {
+    width: 80px !important;
+    text-align: center !important;
+}
+
+#permdialog_grouped_permissions td,
+#perm_entry_table td {
+    padding: 10px 14px !important;
+    border: none !important;
+    border-top: 1px solid #e6e6e0 !important;
+    font-size: 14px !important;
+    color: #1f1f1c !important;
+    background: #fbfbf9 !important;
+    vertical-align: middle !important;
+}
+
+#permdialog_grouped_permissions tr:first-child td,
+#perm_entry_table tr:first-child td {
+    border-top: none !important;
+}
+
+#permdialog_grouped_permissions tr:hover td,
+#perm_entry_table tr:hover td {
+    background: #f3f3ee !important;
+}
+
+#permdialog_grouped_permissions td:not(:first-child),
+#perm_entry_table td:nth-child(2),
+#perm_entry_table td:nth-child(3) {
+    text-align: center !important;
+    width: 80px !important;
+}
+
+/* ── Checkboxes ───────────────────────────────────────────── */
+input[type="checkbox"] {
+    width: 16px !important;
+    height: 16px !important;
+    accent-color: #2d5f92 !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+    vertical-align: middle !important;
+}
+
+/* ── Permissions user title ───────────────────────────────── */
+#permissions_user_title {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: #5a5a55 !important;
+    margin-bottom: 8px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+}
+
+/* ── Advanced dialog: perm entry area ────────────────────── */
+#perm_entry_name_text {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #3a3a36 !important;
+    margin-right: 8px !important;
+}
+
+#perm_entry_username {
+    display: inline-block !important;
+    min-width: 160px !important;
+    padding: 4px 8px !important;
+    border: 1px solid #d7d7d0 !important;
+    border-radius: 8px !important;
+    background: #fbfbf9 !important;
+    font-size: 14px !important;
+    color: #1f1f1c !important;
+    margin-right: 8px !important;
+    vertical-align: middle !important;
+}
+
+#perm_entry_change_user {
+    font-size: 13px !important;
+    padding: 6px 14px !important;
+    border-radius: 8px !important;
+    border: 1px solid #c8c8c1 !important;
+    background: #f6f6f4 !important;
+    color: #1f1f1c !important;
+    cursor: pointer !important;
+    box-shadow: none !important;
+    vertical-align: middle !important;
+}
+
+#perm_entry_change_user:hover {
+    background: #ecece7 !important;
+}
+
+/* ── Inheritance controls ─────────────────────────────────── */
+#adv_perm_inheritance_div,
+#adv_perm_replace_child_div {
+    font-size: 13px !important;
+    color: #3e3e39 !important;
+    margin-top: 12px !important;
+    line-height: 1.5 !important;
+}
+
+#adv_perm_inheritance_div input,
+#adv_perm_replace_child_div input {
+    margin-right: 8px !important;
+    vertical-align: middle !important;
+}
+
+/* ── Owner / effective tabs ───────────────────────────────── */
+#adv_owner_tab,
+#adv_effective_tab {
+    font-size: 14px !important;
+    color: #2b2b28 !important;
+}
+
+#adv_owner_current_owner,
+#adv_effective_current_user {
+    padding: 8px 12px !important;
+    border: 1px solid #d7d7d0 !important;
+    border-radius: 8px !important;
+    background: #fbfbf9 !important;
+    min-height: 36px !important;
+    font-size: 14px !important;
+    margin-bottom: 10px !important;
+}
+
+#adv_effective_effective_list {
+    border: 1px solid #d7d7d0 !important;
+    border-radius: 10px !important;
+    background: #fbfbf9 !important;
+    padding: 10px 14px !important;
+    font-size: 14px !important;
+}
+
+/* ── Buttons ──────────────────────────────────────────────── */
+.ui-button,
+#perm_add_user,
+#perm_remove_user,
+#adv_owner_change_button,
+#adv_effective_user_select {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    padding: 8px 18px !important;
+    border-radius: 8px !important;
+    border: 1px solid #c8c8c1 !important;
+    background: #f6f6f4 !important;
+    color: #1f1f1c !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+    line-height: 1.4 !important;
+    height: auto !important;
+}
+
+.ui-button:hover,
+#perm_add_user:hover,
+#perm_remove_user:hover,
+#adv_owner_change_button:hover,
+#adv_effective_user_select:hover {
+    background: #ecece7 !important;
+}
+
+/* ── Footer button bar ────────────────────────────────────── */
+/* Force the button pane to sit at the very bottom */
+.ui-dialog-buttonpane {
+    position: absolute !important; /* Pins it to the bottom of the dialog shell */
+    bottom: 0 !important;
+    width: 100% !important;
+    background: #f6f6f4 !important;
+    border-top: 1px solid #e2e2dc !important;
+    padding: 12px 24px !important;
+    z-index: 10 !important;
+}
+
+.ui-dialog-buttonset {
+    float: none !important; /* Override default jQuery UI float */
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 10px !important;
+    margin-left: auto !important; /* Pushes the button set to the far right */
+}
+
+/* Ensure helper text stays on the left if it exists */
+#permdialog_advanced_explantion_text {
+    flex: 1 !important;
+    text-align: left !important;
+    margin: 0 !important;
+}
+
+/* Primary / Save button */
+.ui-dialog-buttonpane .ui-button:last-child,
+.ui-dialog-buttonset .ui-button:last-child {
+    background: #2d5f92 !important;
+    color: #ffffff !important;
+    border-color: #2d5f92 !important;
+}
+
+.ui-dialog-buttonpane .ui-button:last-child:hover,
+.ui-dialog-buttonset .ui-button:last-child:hover {
+    background: #1f4470 !important;
+    border-color: #1f4470 !important;
+}
+
+/* Advanced dialog — Save is the only button so don't make it blue */
+.ui-dialog[aria-describedby="advdialog"] .ui-dialog-buttonpane .ui-button:last-child {
+    background: #f6f6f4 !important;
+    color: #1f1f1c !important;
+    border-color: #c8c8c1 !important;
+}
+
+.ui-dialog[aria-describedby="advdialog"] .ui-dialog-buttonpane .ui-button:last-child:hover {
+    background: #ecece7 !important;
+}
+
+/* ── Helper text ──────────────────────────────────────────── */
+#permdialog_advanced_explantion_text {
+    font-size: 12px !important;
+    color: #7a7a75 !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+    flex: 1 !important;
+}
+
+/* ── Dropdowns ────────────────────────────────────────────── */
+#adv_effective_user_dropdown {
+    width: 180px !important;
+    padding: 7px 10px !important;
+    border: 1px solid #cfcfc8 !important;
+    border-radius: 8px !important;
+    background: #ffffff !important;
+    font-size: 13px !important;
+    color: #1f1f1c !important;
+    margin-bottom: 12px !important;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #efefe9; }
+::-webkit-scrollbar-thumb { background: #c6c6bf; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #aeaea6; }
