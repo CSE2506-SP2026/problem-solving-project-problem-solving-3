@@ -450,8 +450,13 @@ input[type="checkbox"] {
     background: #fbfbf9 !important;
     padding: 10px 14px !important;
     font-size: 14px !important;
+    height: 33% !important;
+    overflow-y: scroll !important;
 }
 
+[id$="_all_users"].selectlist {
+    height: 30% !important;
+}
 /* ── Buttons ──────────────────────────────────────────────── */
 .ui-button,
 #perm_add_user,
