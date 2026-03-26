@@ -237,6 +237,16 @@ function open_advanced_dialog(file_path) {
         $('#adv_perm_inheritance').prop('checked', false)
     }
 
+    // Hide "Replace all child object permissions with inheritable permissions from this object"
+    // checkbox if object is not a folder (it's only for folders)
+    if (file_obj.is_folder) {
+        $('#adv_perm_replace_child_permissions').show();
+        $('#adv_perm_replace_child_permissions_label').show();
+    } else {
+        $('#adv_perm_replace_child_permissions').prop('checked', false).hide();
+        $('#adv_perm_replace_child_permissions_label').hide();
+    }
+
 
 
     // permissions list for permissions tab:
