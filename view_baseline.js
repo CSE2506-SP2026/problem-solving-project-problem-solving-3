@@ -240,14 +240,11 @@ function open_advanced_dialog(file_path) {
     // Hide "Replace all child object permissions with inheritable permissions from this object"
     // checkbox if object is not a folder (it's only for folders)
     if (file_obj.is_folder) {
-        $('#adv_perm_replace_child_permissions').show();
-        $('#adv_perm_replace_child_permissions_label').show();
+        $('#adv_perm_replace_child_div').show();
     } else {
-        $('#adv_perm_replace_child_permissions').prop('checked', false).hide();
-        $('#adv_perm_replace_child_permissions_label').hide();
+        $('#adv_perm_replace_child_div').hide();
+        $('#adv_perm_replace_child_permissions').prop('checked', false);
     }
-
-
 
     // permissions list for permissions tab:
     let users = get_file_users(file_obj)
@@ -323,13 +320,13 @@ for(let p of Object.values(permissions)) {
 }
 
 // Advanced dialog
-$( "#advtabs" ).tabs({
-    heightStyle: 'fill'
+$("#advtabs").tabs({
+    heightStyle: 'content'
 });
+
 let adv_contents = $(`#advdialog`).dialog({
     position: { my: "top", at: "top", of: $('#html-loc') },
     width: 700,
-    height: 450,
     modal: true,
     autoOpen: false,
     appendTo: "#html-loc",
