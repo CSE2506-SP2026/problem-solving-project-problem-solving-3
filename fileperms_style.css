@@ -592,3 +592,27 @@ input[type="checkbox"] {
 ::-webkit-scrollbar-track { background: #efefe9; }
 ::-webkit-scrollbar-thumb { background: #c6c6bf; border-radius: 999px; }
 ::-webkit-scrollbar-thumb:hover { background: #aeaea6; }
+
+
+.user-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.user-name {
+    flex: 1;
+}
+
+.remove-user-btn {
+    font-size: 11px !important;
+    padding: 4px 10px !important;
+    border-radius: 5px !important;
+    border: 1px solid #d3d1c7 !important;
+    background: #ffffff !important;
+    cursor: pointer !important;
+}
+
+.remove-user-btn:hover {
+    background: #f8f7f4 !important;
+}

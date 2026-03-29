@@ -32,19 +32,20 @@ function define_attribute_observer(watched_elem_selector, watched_attribute, on_
 // The element automatically creates an icon which varies based on whether it's a singular user or a group, 
 // and also adds any attributes you pass along
 function make_user_elem(id_prefix, uname, user_attributes=null) {
-    user_elem = $(`<div class="ui-widget-content" id="${id_prefix}_${uname}" name="${uname}">
-        <span id="${id_prefix}_${uname}_icon" class="oi ${is_user(all_users[uname])?'oi-person':'oi-people'}"/> 
-        <span id="${id_prefix}_${uname}_text">${uname} </span>
-    </div>`)
+    let user_elem = $(`
+        <div class="ui-widget-content user-row" id="${id_prefix}_${uname}" name="${uname}">
+            <span class="user-name">${uname}</span>
+            <button class="remove-user-btn" data-username="${uname}">Remove from Group</button>
+        </div>
+    `);
 
     if (user_attributes) {
-        // if we need to add the user's attributes: go through the properties for that user and add each as an attribute to user_elem.
-        for(uprop in user_attributes) {
-            user_elem.attr(uprop, user_attributes[uprop])
+        for (let uprop in user_attributes) {
+            user_elem.attr(uprop, user_attributes[uprop]);
         }
     }
 
-    return user_elem
+    return user_elem;
 }
 
 

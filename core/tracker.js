@@ -482,3 +482,25 @@ function standardLoad(location, extraWork) {
  * Set up document on ready.
  */
 $document.ready(setUpInitial);
+
+
+$(document).on('click', '.remove-user-btn', function(e) {
+    e.stopPropagation(); // prevent selecting row
+
+    let username = $(this).data('username');
+    let filepath = perm_dialog.attr('filepath');
+
+    let user_elem = $(`#permdialog_file_user_${username}`);
+    let has_inherited_permissions = user_elem.attr('inherited') === "true";
+
+    if (has_inherited_permissions) {
+        $('.cant_remove_username').text(username);
+        cant_remove_dialog.dialog('open');
+    } else {
+        // remove permissions
+        remove_all_perms_for_user(path_to_file[filepath], all_users[username]);
+
+        // remove from UI
+        user_elem.remove();
+    }
+});
