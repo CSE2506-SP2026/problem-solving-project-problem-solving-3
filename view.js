@@ -8,33 +8,39 @@
 function make_file_element(file_obj) {
     let file_hash = get_full_path(file_obj)
 
-    if(file_obj.is_folder) {
-        let folder_elem = $(`<div class='folder' id="${file_hash}_div">
-            <h3 id="${file_hash}_header">
-                <span class="oi oi-folder" id="${file_hash}_icon"/> ${file_obj.filename} 
-                <button class="ui-button ui-widget ui-corner-all permbutton" path="${file_hash}" id="${file_hash}_permbutton"> 
-                    Edit Permissions <span class="oi oi-lock-unlocked" id="${file_hash}_permicon"/>
+    if (file_obj.is_folder) {
+        let folder_elem = $(`<div class="folder" id="${file_hash}_div">
+            <div class="folder_header" id="${file_hash}_header">
+                <div class="file_label">
+                    <span class="oi oi-folder folder_icon" id="${file_hash}_icon"></span>
+                    <span class="file_name">${file_obj.filename}</span>
+                </div>
+                <button class="ui-button ui-widget ui-corner-all permbutton" path="${file_hash}" id="${file_hash}_permbutton">
+                    Edit Permissions <span class="oi oi-lock-unlocked" id="${file_hash}_permicon"></span>
                 </button>
-            </h3>
+            </div>
         </div>`)
 
-        // append children, if any:
-        if( file_hash in parent_to_children) {
-            let container_elem = $("<div class='folder_contents'></div>")
+        if (file_hash in parent_to_children) {
+            let container_elem = $('<div class="folder_contents"></div>')
             folder_elem.append(container_elem)
-            for(child_file of parent_to_children[file_hash]) {
+            for (child_file of parent_to_children[file_hash]) {
                 let child_elem = make_file_element(child_file)
                 container_elem.append(child_elem)
             }
         }
         return folder_elem
-    }
-    else {
-        return $(`<div class='file'  id="${file_hash}_div">
-            <span class="oi oi-file" id="${file_hash}_icon"/> ${file_obj.filename}
-            <button class="ui-button ui-widget ui-corner-all permbutton" path="${file_hash}" id="${file_hash}_permbutton"> 
-                Edit Permissions <span class="oi oi-lock-unlocked" id="${file_hash}_permicon"/>
-            </button>
+    } else {
+        return $(`<div class="file" id="${file_hash}_div">
+            <div class="file_row">
+                <div class="file_label">
+                    <span class="oi oi-file file_icon" id="${file_hash}_icon"></span>
+                    <span class="file_name">${file_obj.filename}</span>
+                </div>
+                <button class="ui-button ui-widget ui-corner-all permbutton" path="${file_hash}" id="${file_hash}_permbutton">
+                    Edit Permissions <span class="oi oi-lock-unlocked" id="${file_hash}_permicon"></span>
+                </button>
+            </div>
         </div>`)
     }
 }
