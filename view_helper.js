@@ -31,11 +31,15 @@ function define_attribute_observer(watched_elem_selector, watched_attribute, on_
 // Make an element for a user - this element would usually go into a selectable list of users. 
 // The element automatically creates an icon which varies based on whether it's a singular user or a group, 
 // and also adds any attributes you pass along
-function make_user_elem(id_prefix, uname, user_attributes=null) {
+function make_user_elem(id_prefix, uname, user_attributes = null, show_remove_button = false) {
+    let remove_button_html = show_remove_button
+        ? `<button class="remove-user-btn" data-username="${uname}">Remove from Group</button>`
+        : '';
+
     let user_elem = $(`
         <div class="ui-widget-content user-row" id="${id_prefix}_${uname}" name="${uname}">
             <span class="user-name">${uname}</span>
-            <button class="remove-user-btn" data-username="${uname}">Remove from Group</button>
+            ${remove_button_html}
         </div>
     `);
 
@@ -51,14 +55,18 @@ function make_user_elem(id_prefix, uname, user_attributes=null) {
 
 // make a list of users, suitable for inserting into a select list, given a map of user name to some arbitrary info.
 // optionally, adds all the properties listed for a given user as attributes for that user's element.
-function make_user_list(id_prefix, usermap, add_attributes = false) {
-    let u_elements = []
-    for(uname in usermap){
-        // make user element; if add_attributes is true, pass along usermap[uname] for attribute creation.
-        user_elem = make_user_elem(id_prefix, uname, add_attributes ? usermap[uname] : null )
-        u_elements.push(user_elem)
+function make_user_list(id_prefix, usermap, add_attributes = false, show_remove_button = false) {
+    let u_elements = [];
+    for (uname in usermap) {
+        user_elem = make_user_elem(
+            id_prefix,
+            uname,
+            add_attributes ? usermap[uname] : null,
+            show_remove_button
+        );
+        u_elements.push(user_elem);
     }
-    return u_elements
+    return u_elements;
 }
 
 
