@@ -233,8 +233,10 @@ function define_grouped_permission_checkboxes(id_prefix, which_groups = null) {
     }
     // For each permissions group, create a row:
     for(let g of which_groups){
+        // if the group is "Full_control", add a note that this affects all permissions
+        let note = g === 'Full_control' ? ' <span style="font-size:11px;color:#888780;font-style:italic">(affects all permissions)</span>' : ''
         let row = $(`<tr id="${id_prefix}_row_${g}">
-            <td id="${id_prefix}_${g}_name">${g}</td>
+            <td id="${id_prefix}_${g}_name">${g}${note}</td>
         </tr>`)
         for(let ace_type of ['allow', 'deny']) {
             row.append(`<td id="${id_prefix}_${g}_${ace_type}_cell">
