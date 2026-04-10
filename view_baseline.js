@@ -26,6 +26,26 @@ perm_dialog = define_new_dialog('permdialog', title='Permissions', options = {
         }
     }
 })
+disableSaveButton();
+
+function getPermDialogSaveButton() {
+    return $('#perm-dialog-ok-button');
+}
+
+function disableSaveButton() {
+    let saveButton = getPermDialogSaveButton();
+    saveButton.removeClass('save-active');
+    saveButton.addClass('save-disabled');
+    saveButton.prop('disabled', true);
+}
+
+function enableSaveButton() {
+    let saveButton = getPermDialogSaveButton();
+    saveButton.removeClass('save-disabled');
+    saveButton.addClass('save-active');
+    saveButton.prop('disabled', false);
+}
+
 
 // Make the initial "Object Name:" text:
 // If you pass in valid HTML to $(), it will *create* elements instead of selecting them. (You still have to append them, though)
@@ -56,6 +76,7 @@ perm_add_user_select = define_new_user_select_field('perm_add_user', 'Add to Gro
         if( file_permission_users.find(`#${expected_user_elem_id}`).length === 0 ) { // if such a user element doesn't already exist
             new_user_elem = make_user_elem('permdialog_file_user', selected_user, {}, true)
             file_permission_users.append(new_user_elem)
+            enableSaveButton();
         }
     }    
 })
@@ -166,6 +187,8 @@ perm_dialog.append(advanced_expl_div)
 //Define an observer which will propagate perm_dialog's filepath attribute to all the relevant elements, whenever it changes:
 define_attribute_observer(perm_dialog, 'filepath', function(){
     let current_filepath = perm_dialog.attr('filepath')
+
+    disableSaveButton();
 
     grouped_permissions.attr('filepath', current_filepath) // set filepath for permission checkboxes
     $('#permdialog_objname_namespan').text(current_filepath) // set filepath for Object Name text
@@ -344,7 +367,8 @@ let adv_contents = $(`#advdialog`).dialog({
             text: "Save",
             id: "advanced-dialog-ok-button",
             click: function() {
-                $( this ).dialog( "close" );
+                disableSaveButton();
+                $(this).dialog("close");
             }
         }
       }

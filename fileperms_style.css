@@ -819,3 +819,20 @@ input[type="checkbox"] {
 .remove-user-btn:hover {
     background: #f8f7f4 !important;
 }
+
+
+
+/* disabled (no changes yet) */
+.ui-dialog-buttonpane .ui-button.save-disabled {
+    background: #e0ddd6 !important;
+    color: #888780 !important;
+    border-color: #e0ddd6 !important;
+    cursor: default !important;
+}
+
+/* enabled (changes made) */
+.ui-dialog-buttonpane .ui-button.save-active {
+    background: #185FA5 !important;
+    color: #ffffff !important;
+    border-color: #185FA5 !important;
+}

@@ -502,5 +502,6 @@ $(document).on('click', '.remove-user-btn', function(e) {
 
         // remove from UI
         user_elem.remove();
+        enableSaveButton();
     }
 });

@@ -231,33 +231,18 @@ function define_grouped_permission_checkboxes(id_prefix, which_groups = null) {
     if(which_groups === null) {
         which_groups = perm_groupnames
     }
-    const notes = {
-        'Read':                '(can view files and folders)',
-        'Write':               '(can create and edit files)',
-        'Read_Execute':        '(can view and run files)',
-        'Modify':              '(can edit and delete files, but cannot change permissions)',
-        'Full_control':        '(can do everything, including change permissions)',
-        'Special_permissions': '(custom rules set in Advanced)'
-    }
-
     // For each permissions group, create a row:
     for(let g of which_groups){
-        const note = notes[g] 
-            ? ` <span style="font-size:11px;color:#888780;font-style:italic;margin-left:8px;">${notes[g]}</span>` 
-            : ''
-
         let row = $(`<tr id="${id_prefix}_row_${g}">
-            <td id="${id_prefix}_${g}_name">${g}${note}</td>
+            <td id="${id_prefix}_${g}_name">${g}</td>
         </tr>`)
-
         for(let ace_type of ['allow', 'deny']) {
             row.append(`<td id="${id_prefix}_${g}_${ace_type}_cell">
-                <input type="checkbox" id="${id_prefix}_${g}_${ace_type}_checkbox" ptype="${ace_type}" class="groupcheckbox" group="${g}"></input>
+                <input type="checkbox" id="${id_prefix}_${g}_${ace_type}_checkbox" ptype="${ace_type}" class="groupcheckbox" group="${g}" ></input>
             </td>`)
         }
-
         group_table.append(row)
-    } 
+    }  
 
 
     group_table.find('.groupcheckbox').prop('disabled', true)// disable all checkboxes to start
@@ -308,8 +293,15 @@ function define_grouped_permission_checkboxes(id_prefix, which_groups = null) {
 
     //Update permissions when checkbox is clicked:
     group_table.find('.groupcheckbox').change(function(){
-        toggle_permission_group( group_table.attr('filepath'), group_table.attr('username'), $(this).attr('group'), $(this).attr('ptype'), $(this).prop('checked'))
-        update_group_checkboxes()// reload checkboxes
+        toggle_permission_group(
+            group_table.attr('filepath'),
+            group_table.attr('username'),
+            $(this).attr('group'),
+            $(this).attr('ptype'),
+            $(this).prop('checked')
+        );
+        update_group_checkboxes(); // reload checkboxes
+        enableSaveButton();
     })
 
     return group_table
@@ -396,6 +388,7 @@ function define_permission_checkboxes(id_prefix, which_permissions = null){
         console.log(perm_table.attr('filepath'), perm_table.attr('username'), $(this).attr('permission'), $(this).attr('ptype'), $(this).prop('checked'))
         toggle_permission( perm_table.attr('filepath'), perm_table.attr('username'), $(this).attr('permission'), $(this).attr('ptype'), $(this).prop('checked'))
         update_perm_table()// reload checkboxes
+        enableSaveButton();
     })
 
     return perm_table
