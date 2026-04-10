@@ -77,10 +77,19 @@ cant_remove_dialog = define_new_dialog('cant_remove_inherited_dialog', 'Security
     }
 })
 cant_remove_dialog.html(`
-<div id="cant_remove_text">
-    You can't remove <span id="cant_remove_username_1" class = "cant_remove_username"></span> because this object is inheriting permissions from 
-    its parent. To remove <span id="cant_remove_username_2" class = "cant_remove_username"></span>, you must prevent this object from inheriting permissions.
-    Turn off the option for inheriting permissions in Advanced settings, and then try removing <span id="cant_remove_username_3" class = "cant_remove_username"></span>  again.
+<div id="cant_remove_text" style="font-size:14px; color:#333;">
+    <p style="margin-bottom:12px;">
+        Can't remove <strong><span class="cant_remove_username"></span></strong> — this folder is inheriting permissions from its parent.
+    </p>
+    <p style="margin-bottom:8px;">To fix this:</p>
+    <ol style="margin:0; padding-left:20px; line-height:2;">
+        <li>Open <strong>Advanced settings</strong></li>
+        <li>Uncheck <em>"Include inheritable permissions from this object's parent"</em></li>
+        <li>Re-add any users you still want to have access, excluding <strong><span class="cant_remove_username"></span></strong></li>
+    </ol>
+    <p style="margin-top:12px; padding:8px 10px; background:#fff3cd; border-left:3px solid #e6a817; border-radius:3px; font-size:13px;">
+        ⚠️ Turning off inheritance will remove all inherited users and their permissions. Make note of who currently has access before continuing.
+    </p>
 </div>`)
 
 // Make a confirmation "are you sure you want to remove?" dialog
