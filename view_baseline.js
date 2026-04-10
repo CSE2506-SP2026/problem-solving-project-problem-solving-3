@@ -54,7 +54,7 @@ perm_add_user_select = define_new_user_select_field('perm_add_user', 'Add to Gro
     if(selected_user && (selected_user.length > 0) && (selected_user in all_users)) { // sanity check that a user is actually selected (and exists)
         let expected_user_elem_id = `permdialog_file_user_${selected_user}`
         if( file_permission_users.find(`#${expected_user_elem_id}`).length === 0 ) { // if such a user element doesn't already exist
-            new_user_elem = make_user_elem('permdialog_file_user', selected_user)
+            new_user_elem = make_user_elem('permdialog_file_user', selected_user, {}, true)
             file_permission_users.append(new_user_elem)
         }
     }    
